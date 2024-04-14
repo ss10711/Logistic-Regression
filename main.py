@@ -120,9 +120,9 @@ def fitDerivativeSigmoid(X, y, epochs=100, lr=0.1):
     return weights
 
 
-def predict(self, X):
+def predict(weights, X):
     # Predicting with sigmoid function
-    z = dot(X, self.weights)
+    z = dot(X, weights)
     # Returning binary result
     return [1 if i > 0.5 else 0 for i in self.sigmoid(z)]
 
